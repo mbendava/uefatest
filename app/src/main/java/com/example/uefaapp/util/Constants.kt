@@ -8,4 +8,6 @@ object Constants {
 
     const val UCL_NAV_ID = 0
     const val UEL_NAV_ID = 1
+
+    const val BASE_URL = ""  // API URL should go here
 }
