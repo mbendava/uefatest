@@ -20,7 +20,6 @@
         <activity
             android:name=".UefaActivity"
             android:exported="true"
-
             android:theme="@style/Theme.UefaApplication">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

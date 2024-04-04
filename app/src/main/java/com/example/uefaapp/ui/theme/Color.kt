@@ -15,6 +15,22 @@ val TertiaryColor = Color(0xFF107BB5)
 val LightGray = Color(0xFFFCFCFC)
 val DarkGray = Color(0xFF141414)
 
+val uclTabSelectedText: Color
+    @Composable
+    get() = Color(0xFF5AF7DC)
+
+val uclTabBackground: Color
+    @Composable
+    get() = Color(0xFF151573)
+
+val uelTabSelectedText: Color
+    @Composable
+    get() = Color(0xFFFF6900)
+
+val uelTabBackground: Color
+    @Composable
+    get() = Color(0xFF2C2C2E)
+
 val Colors.welcomeIntroTextColor: Color
     @Composable
     get() = if (isLight) DarkGray else LightGray
