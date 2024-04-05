@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Uefa Application</string>
+
+    //  Welcome screen
+    <string name="welcome_screen_intro">Welcome to UEFA page. Choose a competition between UCL and UEL.</string>
+    <string name="ucl_button_text">UCL</string>
+    <string name="ucl_image_description">UCL Image</string>
+    <string name="uel_button_text">UEL</string>
+    <string name="uel_image_description">UEL Image</string>
+    <string name="player_thumbnail">Player thumbnail</string>
 </resources>
