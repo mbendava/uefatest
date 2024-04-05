@@ -34,3 +34,19 @@ val uelTabBackground: Color
 val Colors.welcomeIntroTextColor: Color
     @Composable
     get() = if (isLight) DarkGray else LightGray
+
+val uclSquadDividerColor: Color
+    @Composable
+    get() = Color(0xFF000040)
+
+val uelSquadDividerColor: Color
+    @Composable
+    get() = Color(0xFF000000)
+
+val uclListBackground: Color
+    @Composable
+    get() = Color(0xFF0A0A61)
+
+val uelListBackground: Color
+    @Composable
+    get() = Color(0xFF1C1C1E)

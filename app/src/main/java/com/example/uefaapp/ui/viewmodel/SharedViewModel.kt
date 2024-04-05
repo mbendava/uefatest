@@ -1,5 +1,6 @@
 package com.example.uefaapp.ui.viewmodel
 
+import android.annotation.SuppressLint
 import androidx.lifecycle.ViewModel
 import com.example.uefaapp.di.UefaModule
 import com.example.uefaapp.ui.composables.GroupsScreen
@@ -13,7 +14,9 @@ class SharedViewModel : ViewModel() {
 
     //  UefaRepository should be provided here when API is available
     val clubData = UefaModule.provideMockRepository().clubData
+    var competition: Int = -1
 
+    @SuppressLint("StateFlowValueCalledInComposition")
     val tabs = listOf(
         TabItem(
             title = "Overview",
@@ -33,7 +36,12 @@ class SharedViewModel : ViewModel() {
         ),
         TabItem(
             title = "Squad",
-            screen = { SquadScreen(content = "Squad Page")}
+            screen = {
+                SquadScreen(
+                    content = "Squad Page",
+                    clubData = clubData.value.data?.data,
+                    competition = competition
+                )}
         )
     )
 }

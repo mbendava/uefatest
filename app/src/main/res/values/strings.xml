@@ -7,4 +7,5 @@
     <string name="ucl_image_description">UCL Image</string>
     <string name="uel_button_text">UEL</string>
     <string name="uel_image_description">UEL Image</string>
+    <string name="player_thumbnail">Player thumbnail</string>
 </resources>

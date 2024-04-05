@@ -8,16 +8,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.rememberPagerState
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Icon
 import androidx.compose.material.IconButton
 import androidx.compose.material.Tab
 import androidx.compose.material.TabRow
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -31,6 +27,7 @@ import com.example.uefaapp.ui.theme.TABS_HEIGHT
 import com.example.uefaapp.ui.theme.uelTabBackground
 import com.example.uefaapp.ui.theme.uelTabSelectedText
 import com.example.uefaapp.ui.viewmodel.SharedViewModel
+import com.example.uefaapp.util.Constants
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalFoundationApi::class)
@@ -39,16 +36,13 @@ fun UelScreen(
     navigateToWelcomeScreen: () -> Unit,
     sharedViewModel: SharedViewModel
 ) {
-    val clubData by sharedViewModel.clubData.collectAsState()
+    sharedViewModel.competition = Constants.UEL_NAV_ID
     val tabs = sharedViewModel.tabs
 
     val pagerState = rememberPagerState(pageCount = { tabs.size })
     val coroutineScope = rememberCoroutineScope()
 
-    Column(
-        modifier = Modifier
-            .verticalScroll(rememberScrollState())
-    ) {
+    Column {
         Image(
             modifier = Modifier
                 .fillMaxWidth()
